@@ -1,0 +1,427 @@
+Apurbo's Music Academy
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apurbo's Music Academy</title>
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Condiment&display=swap" rel="stylesheet">
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<style>
+:root{
+    --bg:#0b0f19; 
+    --text:#fff; 
+    --card:#121829; 
+    --accent:#ffb400;
+    --footer:#fff;
+}
+body.light{
+    --bg:#fff;
+    --text:#111;
+    --card:#f1f1f1;
+    --accent:#ffb400;
+    --footer:#111;
+}
+body{
+    background:var(--bg);
+    color:var(--text);
+    font-family: 'Roboto', sans-serif;
+    transition:.4s;
+}
+h1,h2,h3,h4,h5,h6{font-family: 'Poppins', sans-serif;}
+.navbar{
+    backdrop-filter: blur(10px);
+    font-family: "Condiment", cursive;
+    font-weight:400;
+    font-style: normal;
+    font-size: 20px !important;
+}
+body.light .navbar{background: rgba(20,20,20,0.6);
+    border-bottom: rgba(197, 171, 171, 0.08); color:var(--footer);}
+
+.hero{
+    height:90vh; display:flex; align-items:center; justify-content:center; text-align:center; color:white;
+    background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.7)), url("image/hero-background.PNG");
+    background-size:cover;
+}
+.section{padding:80px 0;}
+.card-custom{background:var(--card); padding:25px; border-radius:12px; height:100%; transition:.4s;}
+.card-custom h4{margin-bottom:15px;}
+.post-card{background:var(--card); border-radius:10px; overflow:hidden; transition:.4s; display:flex; flex-direction:column; height:100%;}
+.post-card img{width:100%; height:200px; object-fit:cover;}
+.post-card .post-content{padding:15px; flex-grow:1;}
+
+/* Gallery CSS for 400x400 images */
+.gallery img{
+    width:400px;
+    height:400px;
+    object-fit:cover;
+    border-radius:10px;
+    transition:.4s;
+}
+@media (max-width:992px){
+    .gallery img{
+        width:100%;
+        height:auto;
+    }
+}
+
+/* Instructor Image */
+.instructor-img{
+    width:190px;
+    height:190px;
+    object-fit:cover;
+    border-radius:50%;
+    padding:6px;
+    background:linear-gradient(45deg,#05b52e,#1eb011,#37f45d);
+    box-shadow:0 10px 30px rgba(131, 148, 131, 0.35);
+    transition:0.4s;
+}
+/* Hover */
+.instructor-img:hover{
+    transform:scale(1.07) rotate(2deg);
+}
+/* Tablet */
+@media (max-width: 992px){
+    .instructor-img{
+        width:160px;
+        height:160px;
+    }
+}
+/* Mobile */
+@media (max-width: 576px){
+    .instructor-img{
+        width:130px;
+        height:130px;
+        padding:5px;
+    }
+}
+
+footer{background:#020617; padding:25px; text-align:center; color:var(--footer);}
+body.light footer{background:#f1f1f1; color:var(--footer);}
+
+/* Morphing theme toggle */
+.toggle-wrapper {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 9999;
+}
+.toggle-wrapper input{
+  display:none;
+}
+.toggle {
+  cursor:pointer;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  background:var(--card);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  transition: all 0.5s;
+}
+.toggle i{
+  position:relative;
+  z-index:2;
+  font-size:1.5rem;
+  color:var(--accent);
+  transition:.5s;
+}
+body.light .toggle i{color:#FFA500;}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+<div class="container">
+<a class="navbar-brand fw-bold">Apurbo's Music Academy</a>
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="nav">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="#courses">Curriculum</a></li>
+<li class="nav-item"><a class="nav-link" href="#schedule">Schedule</a></li>
+<li class="nav-item"><a class="nav-link" href="#instructors">Instructor</a></li>
+<li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+<li class="nav-item"><a class="nav-link" href="#facebook">Facebook</a></li>
+<li class="nav-item"><a class="nav-link" href="#contact">Enroll</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+<div>
+<h1>Apurbo's Music Academy</h1>
+<p>Professional Guitar Training Program</p>
+<a href="#contact" class="btn btn-warning btn-lg">Enroll Now</a>
+</div>
+</section>
+
+<!-- CURRICULUM -->
+<section id="courses" class="section container">
+<h2 class="text-center mb-5">Full Curriculum</h2>
+<div class="row g-4">
+<div class="col-md-4"><div class="card-custom">
+<h4>Zero Basic</h4>
+<ul>
+<li>Introduction to Guitar Fundamentals</li>
+<li>Understanding Guitar Anatomy</li>
+<li>Proper Guitar Posture and Hand Placement</li>
+<li>Basic Guitar Maintenance</li>
+<li>Introduction to Reading Guitar Tabs</li>
+<li>Initial Strumming Techniques</li>
+</ul>
+</div></div>
+<div class="col-md-4"><div class="card-custom">
+<h4>Basic Level</h4>
+<ul>
+<li>Mastering Major-Minor Scales</li>
+<li>Art of Arpeggio</li>
+<li>Fundamental Chord Progressions</li>
+<li>Introduction to Basic Finger Exercises</li>
+<li>Building Speed and Accuracy in Strumming</li>
+<li>Ear Training for Tuning</li>
+<li>Basic Music Theory for Guitarists</li>
+</ul>
+</div></div>
+<div class="col-md-4"><div class="card-custom">
+<h4>Advanced Techniques</h4>
+<ul>
+<li>Introduction to sus2 and sus4 arpeggios</li>
+<li>Dive into 6th Chord Arpeggios</li>
+<li>Elevate with 7th Chord Arpeggios</li>
+<li>Explore 9th Chord Arpeggios</li>
+<li>Precision Finger Exercises</li>
+<li>5 string format arpeggio</li>
+<li>6 string format arpeggio</li>
+<li>Song picking on your own</li>
+<li>Crafting Beautiful Compositions</li>
+<li>Fine-tuning Song Picking Techniques</li>
+<li>Dynamic Strumming Patterns</li>
+<li>Advanced Rhythm Techniques</li>
+</ul>
+</div></div>
+</div>
+</section>
+
+<!-- SCHEDULE & FEES -->
+<section id="schedule" class="section container">
+<h2 class="text-center mb-5">Schedule & Fees</h2>
+<div class="row g-4 justify-content-center">
+<div class="col-md-5 col-lg-3">
+<div class="card-custom text-center p-4 shadow">
+<h4>Offline Class</h4>
+<p>Friday 3‑5 PM</p>
+<p>Bashundhara R/A</p>
+</div>
+</div>
+<div class="col-md-5 col-lg-3">
+<div class="card-custom text-center p-4 shadow">
+<h4>Online Class</h4>
+<p>Monday 10 PM‑12 AM</p>
+<p>Microsoft Teams / Google Classroom</p>
+</div>
+</div>
+<div class="col-md-5 col-lg-3">
+<div class="card-custom text-center p-4 shadow">
+<h4>Admission Fee</h4>
+<p><strong>800 BDT</strong></p>
+<p>(Academic Students: <strong>500 BDT</strong>)</p>
+</div>
+</div>
+<div class="col-md-5 col-lg-3">
+<div class="card-custom text-center p-4 shadow">
+<h4>Monthly Fee</h4>
+<p><strong>2000 BDT</strong></p>
+<p>(Academic Students: <strong>1500 BDT</strong>)</p>
+<p>Payment Circle 1: 1‑5th of a month</p>
+<p>Payment Circle 2: 15‑20th of a month</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- INSTRUCTOR BIO -->
+<section id="instructors" class="section container">
+<h2 class="text-center mb-5">Instructor Biography</h2>
+<div class="row g-4 justify-content-center">
+<div class="col-md-11 card-custom text-center p-5 shadow" id="instructor-card">
+<img src="image/instructor.jpg" class="instructor-img" alt="Instructor">
+<h3 class="mb-3">Apurbo Karmokar</h3>
+<p id="instructor-bio" style="text-align: justify;">
+Apurbo Karmokar, the founder and lead instructor of <strong>Apurbo's Music Academy</strong>, is a passionate guitarist, composer, and educator with over a decade of experience in guitar performance and music education.
+Known for his innovative teaching approach, he emphasizes both technical mastery and creative expression, guiding students to unlock their full musical potential.<br><br>
+Apurbo is the driving force behind <strong>Guitar Never Lies</strong>, a platform, build and run by <strong>K H SAZZAD AREFEEN</strong>, dedicated to nurturing aspiring guitarists through structured lessons, workshops, and performance opportunities.
+His curriculum spans from fundamental techniques to advanced improvisation, ensuring students develop a solid foundation and the confidence to perform professionally.<br><br>
+Beyond teaching, Apurbo has contributed to numerous music projects, collaborated with local artists, and shared his knowledge through online tutorials and masterclasses.
+His dedication to music education has inspired countless students to pursue their passion for guitar, blending traditional methods with modern techniques for a comprehensive learning experience.<br><br>
+At <strong>Apurbo's Music Academy</strong>, he fosters a supportive environment that celebrates creativity, discipline, and the joy of playing guitar, making music learning an engaging and transformative journey for every student.
+</p>
+
+    <!-- Social Links -->
+    <div class="social-links mt-4">
+        <a href="https://www.facebook.com/apurbo.karmokar.52" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/____apurbo.k____/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://open.spotify.com/artist/2OZs7LB9lPduqp5tgaBydX" target="_blank"><i class="fab fa-spotify"></i></a>
+        <a href="https://www.youtube.com/channel/UCTY3z5dZWh4dvuGWDjGwb6w" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://wa.me/+8801797531431" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <style>
+        .social-links a{
+            margin: 0 10px;
+            font-size: 22px;
+            color: #00ff48; /* Change color to match theme */
+            transition: 0.3s;
+        }
+        .social-links a:hover{
+            color: #ffcc70;
+            transform: scale(1.2);
+        }
+    </style>
+
+</div>
+</div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="section container">
+<h2 class="text-center mb-5">Gallery & Picture</h2>
+<div class="row g-4 gallery" id="gallery-rss"></div>
+</section>
+
+<!-- FACEBOOK POSTS -->
+<section id="facebook" class="section container">
+<h2 class="text-center mb-5">Latest Facebook Posts</h2>
+<div class="row g-4" id="fb-posts"></div>
+</section>
+
+<!-- CONTACT FORM -->
+<section id="contact" class="section container">
+<h2 class="text-center mb-5">Admission Form</h2>
+<div class="row justify-content-center">
+<div class="col-md-8">
+<form id="enroll-form">
+  <div class="row g-3">
+    <div class="col-md-6"><input class="form-control" name="name" placeholder="Full Name" required></div>
+    <div class="col-md-6"><input class="form-control" name="email" type="email" placeholder="Email" required></div>
+    <div class="col-md-6"><input class="form-control" name="phone" type="tel" placeholder="Phone Number" required></div>
+    <div class="col-md-6"><input class="form-control" name="whatsapp" type="tel" placeholder="WhatsApp Number"></div>
+    <div class="col-md-6"><input class="form-control" name="age" type="number" placeholder="Age" required></div>
+    <div class="col-md-6"><input class="form-control" name="occupation" placeholder="Occupation"></div>
+    <div class="col-12"><input class="form-control" name="address" placeholder="Home Address"></div>
+    <div class="col-md-6">
+      <select class="form-control" name="classType" required>
+        <option value="">Preferred Class</option>
+        <option value="Offline">Offline</option>
+        <option value="Online">Online</option>
+      </select>
+    </div>
+    <div class="col-md-6"><input class="form-control" name="googleClass" placeholder="Google Classroom Email"></div>
+    <div class="col-md-6"><input class="form-control" name="msTeams" placeholder="Microsoft Teams ID"></div>
+    <div class="col-md-6"><input class="form-control" name="facebookLink" placeholder="Facebook Profile Link"></div>
+    <div class="col-12"><textarea class="form-control" name="message" rows="4" placeholder="Why you want to join guitar classes & if you have any past experience?"></textarea></div>
+    <div class="col-12"><button type="submit" class="btn btn-warning w-100">Submit</button></div>
+  </div>
+</form>
+</div>
+</div>
+</section>
+
+<footer>
+© <span id="current-year"></span> Apurbo's Music Academy
+</footer>
+
+<!-- Morphing Theme Toggle -->
+<div class="toggle-wrapper">
+<input type="checkbox" id="toggle-checkbox">
+<label class="toggle" for="toggle-checkbox"><i class="fas fa-sun"></i></label>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+// Theme toggle
+const checkbox = document.getElementById("toggle-checkbox");
+const bodyEl = document.body;
+const iconEl = document.querySelector(".toggle i");
+checkbox.addEventListener("change", ()=>{
+    bodyEl.classList.toggle("light");
+    iconEl.className = bodyEl.classList.contains("light") ? "fas fa-monn" : "fas fa-sun";
+});
+
+// Dynamic footer year
+document.getElementById("current-year").textContent = new Date().getFullYear();
+
+// EmailJS init
+emailjs.init("UGMFuykpTT17SZH2J");
+
+// Form submit - instant popup
+document.getElementById("enroll-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+    emailjs.sendForm("service_a9b92wo","template_luuiqs8",this)
+    .then(()=>{
+        alert("Thanks for your interest, our admin will contact you!");
+        this.reset();
+    }).catch(err=>{
+        console.error("EmailJS error:",err);
+        alert("Oops! Something went wrong. Try again later.");
+    });
+});
+
+// Gallery images from RSS
+const galleryRSS = "https://rss.app/feeds/NblWgXmIOOFy8iwn.xml";
+fetch("https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent(galleryRSS))
+.then(res => res.json())
+.then(data => {
+    const galleryContainer = document.getElementById("gallery-rss");
+    data.items.slice(2,5).forEach(post => {
+        const col = document.createElement("div");
+        col.className="col-md-4 d-flex justify-content-center";
+        col.innerHTML = `<img src="${post.thumbnail || post.enclosure?.link || 'https://via.placeholder.com/400'}" class="rounded">`;
+        galleryContainer.appendChild(col);
+    });
+});
+
+// Facebook posts from RSS
+fetch("https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent(galleryRSS))
+.then(res => res.json())
+.then(data => {
+    const container = document.getElementById("fb-posts");
+    data.items.slice(0,3).forEach(post => {
+        const col = document.createElement("div");
+        col.className="col-md-4 d-flex";
+        col.innerHTML=`
+        <div class="post-card shadow w-100">
+            <img src="${post.thumbnail || post.enclosure?.link || ''}">
+            <div class="post-content">
+                <h6>${post.title}</h6>
+                <p style="font-size:14px">${post.pubDate.split(" ")[0]}</p>
+                <a href="${post.link}" target="_blank">View Post</a>
+            </div>
+        </div>`;
+        container.appendChild(col);
+    });
+});
+</script>
+</body>
+</html>
