@@ -63,18 +63,38 @@ body.light .navbar{background: rgba(20,20,20,0.6);
 .post-card img{width:100%; height:200px; object-fit:cover;}
 .post-card .post-content{padding:15px; flex-grow:1;}
 
-/* Gallery CSS for 400x400 images */
-.gallery img{
-    width:400px;
-    height:400px;
-    object-fit:cover;
-    border-radius:10px;
-    transition:.4s;
+/* =========================================
+   FACEBOOK - LARGE DESKTOP
+========================================= */
+#facebook .d-flex.justify-content-center {
+    width: 100%;
 }
-@media (max-width:992px){
-    .gallery img{
-        width:100%;
-        height:auto;
+#facebook .fb-page {
+    width: 500px !important;
+    margin: 0 auto !important;
+}
+/* Make the Facebook plugin visually ~1200px wide */
+@media (min-width: 1200px) {
+    #facebook .fb-page {
+        transform: scale(1.8);
+        transform-origin: top center;
+        margin-bottom: 980px !important;
+    }
+}
+/* Tablet */
+@media (min-width: 769px) and (max-width: 1199px) {
+    #facebook .fb-page {
+        transform: scale(1.3);
+        transform-origin: top center;
+        margin-bottom: 350px !important;
+    }
+}
+/* Mobile - don't enlarge */
+@media (max-width: 768px) {
+    #facebook .fb-page {
+        transform: none;
+        margin-bottom: 0 !important;
+        width: 100% !important;
     }
 }
 
@@ -177,51 +197,92 @@ body.light .toggle i{color:#FFA500;}
 
 <!-- CURRICULUM -->
 <section id="courses" class="section container">
-<h2 class="text-center mb-5">Full Curriculum</h2>
-<div class="row g-4">
-<div class="col-md-4"><div class="card-custom">
-<h4>Zero Basic</h4>
-<ul>
-<li>Introduction to Guitar Fundamentals</li>
-<li>Understanding Guitar Anatomy</li>
-<li>Proper Guitar Posture and Hand Placement</li>
-<li>Basic Guitar Maintenance</li>
-<li>Introduction to Reading Guitar Tabs</li>
-<li>Initial Strumming Techniques</li>
-</ul>
-</div></div>
-<div class="col-md-4"><div class="card-custom">
-<h4>Basic Level</h4>
-<ul>
-<li>Mastering Major-Minor Scales</li>
-<li>Art of Arpeggio</li>
-<li>Fundamental Chord Progressions</li>
-<li>Introduction to Basic Finger Exercises</li>
-<li>Building Speed and Accuracy in Strumming</li>
-<li>Ear Training for Tuning</li>
-<li>Basic Music Theory for Guitarists</li>
-</ul>
-</div></div>
-<div class="col-md-4"><div class="card-custom">
-<h4>Advanced Techniques</h4>
-<ul>
-<li>Introduction to sus2 and sus4 arpeggios</li>
-<li>Dive into 6th Chord Arpeggios</li>
-<li>Elevate with 7th Chord Arpeggios</li>
-<li>Explore 9th Chord Arpeggios</li>
-<li>Precision Finger Exercises</li>
-<li>5 string format arpeggio</li>
-<li>6 string format arpeggio</li>
-<li>Song picking on your own</li>
-<li>Crafting Beautiful Compositions</li>
-<li>Fine-tuning Song Picking Techniques</li>
-<li>Dynamic Strumming Patterns</li>
-<li>Advanced Rhythm Techniques</li>
-</ul>
-</div></div>
-</div>
-</section>
+    <h2 class="text-center mb-5">Full Curriculum</h2>
 
+    <div class="row g-4">
+
+        <!-- ZERO BASIC -->
+        <div class="col-md-6 col-lg-3">
+            <div class="card-custom">
+                <h4>Zero Basic</h4>
+                <ul>
+                    <li>Introduction to Guitar Fundamentals</li>
+                    <li>Understanding Guitar Anatomy</li>
+                    <li>Proper Guitar Posture and Hand Placement</li>
+                    <li>Basic Guitar Maintenance</li>
+                    <li>Introduction to Reading Guitar Tabs</li>
+                    <li>Initial Strumming Techniques</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- BASIC LEVEL -->
+        <div class="col-md-6 col-lg-3">
+            <div class="card-custom">
+                <h4>Basic Level</h4>
+                <ul>
+                    <li>Mastering Major-Minor Scales</li>
+                    <li>Art of Arpeggio</li>
+                    <li>Fundamental Chord Progressions</li>
+                    <li>Introduction to Basic Finger Exercises</li>
+                    <li>Building Speed and Accuracy in Strumming</li>
+                    <li>Ear Training for Tuning</li>
+                    <li>Basic Music Theory for Guitarists</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ADVANCED TECHNIQUES -->
+        <div class="col-md-6 col-lg-3">
+            <div class="card-custom">
+                <h4>Advanced Techniques</h4>
+                <ul>
+                    <li>Introduction to sus2 and sus4 arpeggios</li>
+                    <li>Dive into 6th Chord Arpeggios</li>
+                    <li>Elevate with 7th Chord Arpeggios</li>
+                    <li>Explore 9th Chord Arpeggios</li>
+                    <li>Precision Finger Exercises</li>
+                    <li>5 string format arpeggio</li>
+                    <li>6 string format arpeggio</li>
+                    <li>Song picking on your own</li>
+                    <li>Crafting Beautiful Compositions</li>
+                    <li>Fine-tuning Song Picking Techniques</li>
+                    <li>Dynamic Strumming Patterns</li>
+                    <li>Advanced Rhythm Techniques</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ELECTRIC GUITAR -->
+        <div class="col-md-6 col-lg-3">
+            <div class="card-custom">
+                <h4>Playing Electric Guitar: Let's Rock N’ Roll!</h4>
+                <ul>
+                    <li>Introducing electric guitar parts</li>
+                    <li>Power Chords</li>
+                    <li>Noise controlling methods</li>
+                    <li>Playing rhythms with power chords and distortion</li>
+                    <li>Playing solos with distortion</li>
+                    <li>Fast picking exercises</li>
+                    <li>Playing legato and exercises</li>
+                    <li>Composing guitar solos and rhythms using distortion</li>
+                    <li>Lots of songs to pick up</li>
+                </ul>
+
+                <h5 class="mt-4">Technical Section</h5>
+
+                <ul>
+                    <li>Understanding band sound</li>
+                    <li>Use of guitar gadgets or processors</li>
+                    <li>Extended lessons on effects (Compressor, Distortion, Chorus, Delay, Reverb, etc.)</li>
+                    <li>Guitar patching</li>
+                    <li>Preparing yourself for stage</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</section>
 <!-- SCHEDULE & FEES -->
 <section id="schedule" class="section container">
 <h2 class="text-center mb-5">Schedule & Fees</h2>
@@ -242,7 +303,7 @@ body.light .toggle i{color:#FFA500;}
 </div>
 <div class="col-md-5 col-lg-3">
 <div class="card-custom text-center p-4 shadow">
-<h4>Admission Fee</h4>
+<h4>Admission Fee <br><br> (One Time)</h4>
 <p><strong>800 BDT</strong></p>
 <p>(Academic Students: <strong>500 BDT</strong>)</p>
 </div>
@@ -301,16 +362,33 @@ At <strong>Apurbo's Music Academy</strong>, he fosters a supportive environment 
 </div>
 </section>
 
-<!-- GALLERY -->
-<section id="gallery" class="section container">
-<h2 class="text-center mb-5">Gallery & Picture</h2>
-<div class="row g-4 gallery" id="gallery-rss"></div>
-</section>
-
 <!-- FACEBOOK POSTS -->
 <section id="facebook" class="section container">
-<h2 class="text-center mb-5">Latest Facebook Posts</h2>
-<div class="row g-4" id="fb-posts"></div>
+    <h2 class="text-center mb-5">Latest Facebook Posts</h2>
+
+    <div class="d-flex justify-content-center">
+        <div class="fb-page"
+            data-href="https://www.facebook.com/music.academy.of.apurbo/"
+            data-tabs="timeline"
+            data-width="500"
+            data-height="700"
+            data-small-header="false"
+            data-adapt-container-width="true"
+            data-hide-cover="false"
+            data-show-facepile="false">
+
+            <blockquote
+                cite="https://www.facebook.com/music.academy.of.apurbo/"
+                class="fb-xfbml-parse-ignore">
+
+                <a href="https://www.facebook.com/music.academy.of.apurbo/" target="_blank">
+                    Facebook
+                </a>
+
+            </blockquote>
+
+        </div>
+    </div>
 </section>
 
 <!-- CONTACT FORM -->
@@ -366,7 +444,7 @@ const bodyEl = document.body;
 const iconEl = document.querySelector(".toggle i");
 checkbox.addEventListener("change", ()=>{
     bodyEl.classList.toggle("light");
-    iconEl.className = bodyEl.classList.contains("light") ? "fas fa-monn" : "fas fa-sun";
+    iconEl.className = bodyEl.classList.contains("light") ? "fas fa-moon" : "fas fa-sun";
 });
 
 // Dynamic footer year
@@ -387,41 +465,11 @@ document.getElementById("enroll-form").addEventListener("submit", function(e) {
         alert("Oops! Something went wrong. Try again later.");
     });
 });
-
-// Gallery images from RSS
-const galleryRSS = "https://rss.app/feeds/NblWgXmIOOFy8iwn.xml";
-fetch("https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent(galleryRSS))
-.then(res => res.json())
-.then(data => {
-    const galleryContainer = document.getElementById("gallery-rss");
-    data.items.slice(2,5).forEach(post => {
-        const col = document.createElement("div");
-        col.className="col-md-4 d-flex justify-content-center";
-        col.innerHTML = `<img src="${post.thumbnail || post.enclosure?.link || 'https://via.placeholder.com/400'}" class="rounded">`;
-        galleryContainer.appendChild(col);
-    });
-});
-
-// Facebook posts from RSS
-fetch("https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent(galleryRSS))
-.then(res => res.json())
-.then(data => {
-    const container = document.getElementById("fb-posts");
-    data.items.slice(0,3).forEach(post => {
-        const col = document.createElement("div");
-        col.className="col-md-4 d-flex";
-        col.innerHTML=`
-        <div class="post-card shadow w-100">
-            <img src="${post.thumbnail || post.enclosure?.link || ''}">
-            <div class="post-content">
-                <h6>${post.title}</h6>
-                <p style="font-size:14px">${post.pubDate.split(" ")[0]}</p>
-                <a href="${post.link}" target="_blank">View Post</a>
-            </div>
-        </div>`;
-        container.appendChild(col);
-    });
-});
 </script>
 </body>
+<div id="fb-root"></div>
+
+<script async defer crossorigin="anonymous"
+    src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v23.0">
+</script>
 </html>
